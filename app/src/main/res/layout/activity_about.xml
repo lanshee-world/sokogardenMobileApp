@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#9E7A46"
+    android:background="#9E9B96"
     tools:context=".About">
 
     <TextView
@@ -31,14 +31,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_margin="10dp"
-            android:background="#DB942B"
+            android:background="#DCD6CE"
             android:padding="10dp" >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/aboutTxt"
-                android:text="Welcome to our e-commerce application,a super friendly platform designed to make online shopping easy and accessible for everyone.Users can quickly create accounts, securely log in and browse a wide range of products with detailed description and the product photos.Our seemless checkout process allows customers to pay conviniently by use of M-pesa.We are happy and are looking forward to doing business with you."
+                android:text="Welcome to our Lumine application,a super friendly platform designed to make online shopping easy and accessible for everyone.Users can quickly create accounts, securely log in and browse a wide range of products with detailed description and the product photos.Our seemless checkout process allows customers to pay conviniently by use of M-pesa.We are happy and are looking forward to doing business with you."
                 android:textColor="#37091E"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
@@ -53,7 +53,7 @@
                 android:layout_marginRight="50dp"
                 android:text="🎙️ Know us"
                 android:textSize="23sp"
-                android:backgroundTint="#977512" />
+                android:backgroundTint="#A6976C" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
-    android:background="#92B83D4B"
+    android:background="#92626060"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Signin">
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#DE7871"
+            android:background="#737070"
             android:padding="10dp">
 
 <!--            Below is the email EditText  -->
@@ -47,7 +47,7 @@
                 android:id="@+id/email"
                 android:textColor="#000"
                 android:layout_margin="8dp"
-                android:background="#6ADCB3B3"
+                android:background="#6AEDE2E2"
                 android:padding="11dp"/>
 
 
@@ -61,7 +61,7 @@
                 android:inputType="textPassword"
                 android:textColor="#000"
                 android:layout_margin="8dp"
-                android:background="#6ADCB3B3"
+                android:background="#6AEDE2E2"
                 android:padding="11dp"/>
 
 <!--            Below is the sign in button-->
@@ -74,8 +74,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="30dp"
-                android:textColor="#234"
-                android:backgroundTint="#DFA4E9"
+                android:textColor="#B8931F"
+                android:backgroundTint="#ABABAB"
                 android:id="@+id/signinBtn"/>
 
             <TextView
@@ -85,7 +85,7 @@
                 android:textAlignment="center"
                 android:textSize="23sp"
                 android:layout_marginTop="25dp"
-                android:textColor="#E63E64B4"
+                android:textColor="#E6181717"
                 android:id="@+id/signuptxt"/>
 
 

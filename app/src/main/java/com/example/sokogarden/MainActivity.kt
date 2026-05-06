@@ -60,7 +60,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+// 1. Find the Lumine App button by its ID
+        val lumineButton = findViewById<Button>(R.id.btnOpenLink)
 
+// 2. Set the click listener to open the URL
+        lumineButton.setOnClickListener {
+            val url = "https://lumine-x8gk.onrender.com/"
+            val intent = Intent(android.content.Intent.ACTION_VIEW)
+            intent.data = android.net.Uri.parse(url)
+            startActivity(intent)
+        }
 
 
     }

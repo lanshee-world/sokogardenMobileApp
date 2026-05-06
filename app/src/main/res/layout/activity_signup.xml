@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
-    android:background="#A980A5"
+    android:background="#9D949B"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Signup">
@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="🦋Signup🦋"
+        android:text="Join"
         android:textSize="38sp"
         android:layout_margin="16dp"
         android:textAlignment="center"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        android:backgroundTint="#CEB6B6"
+        android:backgroundTint="#ADA6A6"
         android:layout_margin="12dp">
 
         <LinearLayout
@@ -94,14 +94,14 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="👤 Signup"
+                android:text="👤 Join"
                 android:textSize="25sp"
                 android:padding="10dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="20dp"
-                android:textColor="#234"
-                android:backgroundTint="#555F91C8"
+                android:textColor="#E2D141"
+                android:backgroundTint="#556F7276"
                 android:id="@+id/signupBtn"/>
             <TextView
                 android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                 android:textAlignment="center"
                 android:textSize="23sp"
                 android:layout_marginTop="25dp"
-                android:textColor="#E63E64B4"
+                android:textColor="#E6161515"
                 android:id="@+id/signintxt"/>
 
 
