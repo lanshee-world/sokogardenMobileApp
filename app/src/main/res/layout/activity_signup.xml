@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
-    android:background="#9D949B"
+    android:background="#92626060"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Signup">
@@ -13,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Join"
+        android:fontFamily="cursive"
         android:textSize="38sp"
         android:layout_margin="16dp"
         android:textAlignment="center"
         android:textStyle="bold|italic"
         android:background="@drawable/shape"
-        android:textColor="#F13A4D5F"/>
+        android:textColor="#F16291BF"/>
 
 <!--    Below is a cardview-->
     <androidx.cardview.widget.CardView
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        android:backgroundTint="#ADA6A6"
+        android:backgroundTint="#737070"
         android:layout_margin="12dp">
 
         <LinearLayout
@@ -41,11 +42,11 @@
                 android:layout_height="wrap_content"
                 android:hint="👨🏾 Enter your username"
                 android:textColorHint="#000"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textColor="#000"
                 android:id="@+id/username"
                 android:layout_margin="8dp"
-                android:background="#B6BBD7D7"
+                android:background="#6AEDE2E2"
                 android:padding="10dp"/>
 
             <!--            Below is the edit text for email-->
@@ -54,12 +55,12 @@
                 android:layout_height="wrap_content"
                 android:hint="📧 Enter your email Address"
                 android:textColorHint="#000"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textColor="#000"
                 android:id="@+id/email"
                 android:inputType="textEmailAddress"
                 android:layout_margin="8dp"
-                android:background="#B6BBD7D7"
+                android:background="#6AEDE2E2"
                 android:padding="10dp"/>
 
             <!--            Below is the edit text for password-->
@@ -68,12 +69,12 @@
                 android:layout_height="wrap_content"
                 android:hint=" 🔑 Enter your password"
                 android:textColorHint="#000"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textColor="#000"
                 android:id="@+id/password"
                 android:inputType="textPassword"
                 android:layout_margin="8dp"
-                android:background="#B6BBD7D7"
+                android:background="#6AEDE2E2"
                 android:padding="10dp"/>
 
             <!--            Below is the edit text for phone number-->
@@ -82,12 +83,12 @@
                 android:layout_height="wrap_content"
                 android:hint="📞 Enter your Phone Number"
                 android:textColorHint="#000"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textColor="#000"
                 android:id="@+id/phone"
                 android:inputType="number"
                 android:layout_margin="8dp"
-                android:background="#B6BBD7D7"
+                android:background="#6AEDE2E2"
                 android:padding="10dp"/>
 
 <!--            Below is a signup button-->
@@ -95,13 +96,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="👤 Join"
-                android:textSize="25sp"
+                android:fontFamily="cursive"
+                android:textSize="30sp"
                 android:padding="10dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="20dp"
-                android:textColor="#E2D141"
-                android:backgroundTint="#556F7276"
+                android:textColor="#45400F"
+                android:backgroundTint="#ABABAB"
                 android:id="@+id/signupBtn"/>
             <TextView
                 android:layout_width="match_parent"
@@ -110,7 +112,7 @@
                 android:textAlignment="center"
                 android:textSize="23sp"
                 android:layout_marginTop="25dp"
-                android:textColor="#E6161515"
+                android:textColor="#E6181717"
                 android:id="@+id/signintxt"/>
 
 

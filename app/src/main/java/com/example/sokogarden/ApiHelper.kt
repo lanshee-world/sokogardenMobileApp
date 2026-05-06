@@ -57,23 +57,22 @@ class ApiHelper(var context: Context) {
                 if (message == "Login successful") {
                     val user = response.optJSONObject("user")
                     val username = user?.optString("username") ?: ""
-                    val email = user?.optString("email") ?: ""
 
-                    // 🔐 Save to SharedPreferences
-                    val prefs = context.getSharedPreferences("user_session", Context.MODE_PRIVATE)
+                    // 🔐 Save to UserPrefs
+                    val prefs = context.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
                     val editor = prefs.edit()
                     editor.putString("username", username)
-                    editor.putString("email", email)
+                    editor.putBoolean("isLoggedIn", true)
                     editor.apply()
 
                     Toast.makeText(context, "Welcome $username", Toast.LENGTH_LONG).show()
 
-                    // Redirect to Dashboard
+                    // Redirect and clear stack
                     val intent = Intent(context, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     context.startActivity(intent)
                 } else {
-                    Toast.makeText(context, "$message", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Error: $message", Toast.LENGTH_LONG).show()
                 }
             }
 
@@ -83,7 +82,7 @@ class ApiHelper(var context: Context) {
                 responseString: String?,
                 throwable: Throwable?
             ) {
-                Toast.makeText(context, "Error: $responseString", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Failed to connect", Toast.LENGTH_LONG).show()
             }
         })
     }

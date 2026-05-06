@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="8dp"
-            android:background="#D390E7ED">
+            android:background="#D3E1EDEF">
 
             <TextView
                 android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="#DB4F4F"
+                android:textColor="#242222"
                 android:fontFamily="cursive"/>
 
 <!--            Below is our product_image-->
@@ -51,7 +51,7 @@
                 android:layout_marginTop="5dp"
                 android:textStyle="bold"
                 android:textSize="28sp"
-                android:textColor="#C71A34"
+                android:textColor="#B89C4B"
                 android:layout_marginLeft="10dp"/>
 
 <!--            Below is a textview for the product_description-->
@@ -75,7 +75,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
-                android:backgroundTint="#D75C5C"
+                android:backgroundTint="#141313"
                 android:textSize="20sp"
                 android:textColor="#DDDBE4"/>
 

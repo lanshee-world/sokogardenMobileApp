@@ -1,5 +1,6 @@
 package com.example.sokogarden
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -16,45 +17,46 @@ class Signin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_signin)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//        find the two edittext, a button and TextView by use of their ids
+
         val email = findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
-        val signinButton = findViewById<    Button>(R.id.signinBtn)
+        val signinButton = findViewById<Button>(R.id.signinBtn)
         val signupTextView = findViewById<TextView>(R.id.signuptxt)
 
-        // On the textView set on click listener such that when clicked it navigates you to the signup Page
-
         signupTextView.setOnClickListener {
-
-            val intent  = Intent(applicationContext, Signup::class.java)
-
+            val intent = Intent(applicationContext, Signup::class.java)
             startActivity(intent)
-
         }
 
-        //        on click of the button signin, we need to interact with our API endpoint as we pass the two data info email and password
         signinButton.setOnClickListener {
-
-            //Specify the API endpoint
             val api = "https://keyafidel.alwaysdata.net/api/signin"
-
-            //Create a RequestParams that will enable you to hold the data in form of a bundle/package
             val data = RequestParams()
-
-            //Add/append/attach the email and the password
             data.put("email", email.text.toString())
             data.put("password", password.text.toString())
 
-//Import the API helper
-            val helper = ApiHelper(applicationContext)
+            // 1. Save Login Status locally
+            // In a production app, you usually do this ONLY after the API confirms success.
+            // If your ApiHelper handles the redirection, make sure it saves this preference.
+            val sharedPref = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPref.edit()
+            editor.putBoolean("isLoggedIn", true)
+            editor.apply()
 
-//By use of the function post_login insideof the helper class, post your data
+            val helper = ApiHelper(applicationContext)
             helper.post_login(api, data)
-        }
+
+            // 2. Redirect to MainActivity after posting (or handle inside ApiHelper callback)
+            val intent = Intent(this, MainActivity::class.java)
+            // Clear the activity stack so they can't "back" into the login screen
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
         }
     }
+}
